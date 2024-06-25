@@ -14,7 +14,7 @@ const sendMail = async ({ from, to, subject, text, html }) => {
   });
 
   let info = await transporter.sendMail({
-    from: `RkShare <${from}>`,
+    from: `QShare <${from}>`,
     to,
     subject,
     text,
@@ -43,7 +43,7 @@ export const sendEmail = async (req, res) => {
   sendMail({
     from: emailFrom,
     to: emailTo,
-    subject: 'RkShare file sharing',
+    subject: 'QShare file sharing',
     text: `${emailFrom} shared a file with you.`,
     html: emailTemplate({
       emailFrom: emailFrom,
